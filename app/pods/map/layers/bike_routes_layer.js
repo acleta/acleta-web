@@ -1,7 +1,6 @@
-import GeoJSONLayer from './geo_json';
-import RoutesData from './bike_routes_data';
+import DataSetLayer from './data_set';
 
-export default GeoJSONLayer.extend({
+export default DataSetLayer.extend({
   enabled: true,
-  data: RoutesData
+  id: 'Rutas'
 });
