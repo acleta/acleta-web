@@ -5,8 +5,12 @@ import ajax from 'ic-ajax';
 
 export default BaseLayer.extend({
   source: null,
+  style: function () {
+    return {};
+  }.property(),
   show: function () {
     var mapLayer = new google.maps.Data();
+    mapLayer.setStyle(this.get('style'));
     this.set('mapLayer', mapLayer);
     var map = this.get('map').get('map');
     mapLayer.setMap(map);

@@ -1,7 +1,7 @@
 import DataSetLayer from './data_set';
 
 export default DataSetLayer.extend({
-  enabled: true,
+  enabled: false,
   id: 'bike-santiago'
 });
 
