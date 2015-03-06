@@ -1,23 +1,29 @@
 import Ember from 'ember';
 import BaseLayer from './base';
 import ajax from 'ic-ajax';
-/* global google */
+/* global L */
 
 export default BaseLayer.extend({
   source: null,
-  style: function () {
-    return {};
-  }.property(),
+  style: null,
+  onEachFeature: null,
+  pointToLayer: null,
   show: function () {
-    var mapLayer = new google.maps.Data();
-    mapLayer.setStyle(this.get('style'));
-    this.set('mapLayer', mapLayer);
-    var map = this.get('map').get('map');
-    mapLayer.setMap(map);
+    var layer = this.get('layer');
+    if (!layer) {
+      layer = L.geoJson(null, {
+        style: this.style,
+        onEachFeature: this.onEachFeature,
+        pointToLayer: this.pointToLayer
+      });
+      this.set('layer', layer);
+      this.fetchData().then(function (geoJSON) {
+        layer.addData(geoJSON);
+      });
+    }
 
-    this.fetchData().then(function (geoJSON) {
-      mapLayer.addGeoJson(geoJSON);
-    });
+    var map = this.get('map').get('map');
+    layer.addTo(map);
   },
   fetchData: function () {
     var layer = this;

@@ -9,7 +9,6 @@ function initializeLayersWithMap(map) {
   var layers = [];
 
   Ember.keys(requirejs._eak_seen).filter(function(key) {
-    console.log(key);
     return layerRegExp.test(key);
   }).forEach(function(moduleName) {
     var module = require(moduleName, null, null, true);
