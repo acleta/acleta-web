@@ -1,5 +1,7 @@
-import GeoJSONLayer from './geo_json';
+import DataSetLayer from './data_set';
 
-export default GeoJSONLayer.extend({
-  enabled: true
+export default DataSetLayer.extend({
+  enabled: true,
+  id: 'bike-santiago'
 });
+

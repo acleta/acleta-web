@@ -1,4 +1,6 @@
+import Ember from 'ember';
 import BaseLayer from './base';
+import ajax from 'ic-ajax';
 /* global google */
 
 export default BaseLayer.extend({
@@ -20,7 +22,12 @@ export default BaseLayer.extend({
       if (data) {
         resolve(data);
       } else {
-        reject();
+        ajax(layer.get('source')).then(function (data) {
+          layer.set('data',data);
+          resolve(data);
+        },function (error) {
+          reject(error);
+        });
       }
     });
 
