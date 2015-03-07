@@ -19,7 +19,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "rimraf":"2.2.8"
+    "rimraf": "2.2.8"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.0",
