@@ -30,4 +30,15 @@ app.import("bower_components/font-awesome/fonts/fontawesome-webfont.woff", { des
 app.import("bower_components/font-awesome/fonts/fontawesome-webfont.woff2", { destDir: "fonts" });
 app.import("bower_components/font-awesome/fonts/FontAwesome.otf", { destDir: "fonts" });
 
+// Materialize
+app.import("bower_components/materialize/font/material-design-icons/Material-Design-Icons.eot", { destDir: "fonts" });
+app.import("bower_components/materialize/font/material-design-icons/Material-Design-Icons.svg", { destDir: "fonts" });
+app.import("bower_components/materialize/font/material-design-icons/Material-Design-Icons.ttf", { destDir: "fonts" });
+app.import("bower_components/materialize/font/material-design-icons/Material-Design-Icons.woff", { destDir: "fonts" });
+app.import("bower_components/materialize/font/roboto/Roboto-Bold.ttf", { destDir: "fonts" });
+app.import("bower_components/materialize/font/roboto/Roboto-Light.ttf", { destDir: "fonts" });
+app.import("bower_components/materialize/font/roboto/Roboto-Medium.ttf", { destDir: "fonts" });
+app.import("bower_components/materialize/font/roboto/Roboto-Regular.ttf", { destDir: "fonts" });
+app.import("bower_components/materialize/font/roboto/Roboto-Thin.ttf", { destDir: "fonts" });
+
 module.exports = app.toTree();
