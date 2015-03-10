@@ -44,4 +44,7 @@ app.import("bower_components/materialize/font/roboto/Roboto-Thin.ttf", { destDir
 // Fork ribbon
 app.import("bower_components/github-fork-ribbon-css/gh-fork-ribbon.css");
 
+// ember-google-analytics
+app.import("bower_components/ember-google-analytics/ember-google-analytics.js");
+
 module.exports = app.toTree();

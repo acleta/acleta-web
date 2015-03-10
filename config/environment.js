@@ -42,7 +42,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.googleAnalyticsTrackingId = 'UA-60597458-1'
   }
 
   return ENV;
