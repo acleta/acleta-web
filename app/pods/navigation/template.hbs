@@ -1,7 +1,5 @@
 <nav class="navbar">
   <ul {{bind-attr class=":side-nav active"}}>
-    <li><a href="#!">First Sidebar Link</a></li>
-    <li><a href="#!">Second Sidebar Link</a></li>
     <li>{{#link-to 'features.about'}}About{{/link-to}}</li>
     <li>
       <a {{action 'toggleSideNav'}}>Close</a>

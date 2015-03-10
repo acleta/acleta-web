@@ -41,4 +41,7 @@ app.import("bower_components/materialize/font/roboto/Roboto-Medium.ttf", { destD
 app.import("bower_components/materialize/font/roboto/Roboto-Regular.ttf", { destDir: "fonts" });
 app.import("bower_components/materialize/font/roboto/Roboto-Thin.ttf", { destDir: "fonts" });
 
+// Fork ribbon
+app.import("bower_components/github-fork-ribbon-css/gh-fork-ribbon.css");
+
 module.exports = app.toTree();
