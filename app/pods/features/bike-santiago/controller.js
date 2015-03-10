@@ -5,7 +5,7 @@ export default Ember.ObjectController.extend({
     return this.get('model').properties.status;
   }.property('model'),
   statusKey: function() {
-    return `bike_santiago.statuses.${ this.get('status').toLowerCase() }`
+    return `bike_santiago.statuses.${ this.get('status').toLowerCase() }`;
   }.property('status')
 });
 
