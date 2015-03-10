@@ -1,7 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.View.extend({
-  classNames: ['map'],
+  mapElement: function() {
+    return this.$('.map')[0];
+  }.property('element'),
   didInsertElement: function () {
     this.get('controller').initialize(this);
   }

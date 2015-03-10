@@ -16,9 +16,23 @@ export default DataSetLayer.extend({
         </span>
       `
     });
-    var marker = new L.Marker(location, {icon: icon});
+    var marker = new L.Marker(location, {
+      icon: icon,
+      clickable: true
+    });
+
+    var layer = this;
+    marker.on('click', function() {
+      layer.get('map').transitionToRoute('features.bike-santiago', feature);
+    });
     return marker;
     // return marker('bike-santiago', location);
+  },
+  find: function(id) {
+    return this.fetchData().then(function(data) {
+      var station = data.features.findBy('properties.id', parseInt(id));
+      return station;
+    });
   }
 });
 

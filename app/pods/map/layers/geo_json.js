@@ -14,7 +14,7 @@ export default BaseLayer.extend({
       layer = L.geoJson(null, {
         style: this.style,
         onEachFeature: this.onEachFeature,
-        pointToLayer: this.pointToLayer
+        pointToLayer: this.pointToLayer ? this.pointToLayer.bind(this) : null
       });
       this.set('layer', layer);
       this.fetchData().then(function (geoJSON) {

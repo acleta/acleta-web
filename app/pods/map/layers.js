@@ -28,5 +28,10 @@ export default Ember.ArrayProxy.extend({
     this._super();
     var layers = initializeLayersWithMap(this.get('map'));
     this.set('content', layers);
+  },
+  initialize: function() {
+    this.forEach(function(layer) {
+      layer.initialize();
+    });
   }
 });

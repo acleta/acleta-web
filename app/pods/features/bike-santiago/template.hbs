@@ -1,0 +1,20 @@
+<div class="card-content">
+  <h3>{{properties.name}}</h3>
+  <dd>
+    <dt>Dirección</dt>
+    <dl>{{properties.address}}</dl>
+    <dt>Estado</dt>
+    <dl>{{properties.status}}</dl>
+    <dt>Docks totales</dt>
+    <dl>{{properties.totalDocks}}</dl>
+    <dt>Docks disponibles</dt>
+    <dl>{{properties.availableDocks}}</dl>
+    <dt>Bicicletas disponibles</dt>
+    <dl>{{properties.availableBikes}}</dl>
+  </dd>
+</div>
+<div class="card-action">
+  {{#link-to 'map'}}
+    Cerrar
+  {{/link-to}}
+</div>

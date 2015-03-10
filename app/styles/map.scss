@@ -8,5 +8,13 @@
 
   .marker-bike-santiago {
     color: #ff9a19;
+
+    &.status-unavailable, &.status-unknown  {
+      color: gray;
+    }
+
+    &.status-full, &.status-empty {
+      color: red;
+    }
   }
 }

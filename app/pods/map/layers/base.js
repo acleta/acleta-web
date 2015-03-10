@@ -5,6 +5,8 @@ export default Ember.Object.extend({
   enabled: false,
   init: function () {
     this._super();
+  },
+  initialize: function() {
     if (this.get('enabled')) {
       this.show();
     }
