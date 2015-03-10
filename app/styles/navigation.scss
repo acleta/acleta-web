@@ -2,4 +2,26 @@
   left: 0 !important;
 }
 
+.features {
+  position:absolute;
+  width:100%;
+  min-height:100%;
+  top: 0px;
+  left:0px;
+  z-index:0;
+  padding: 8% 0;
 
+  .features-backdrop {
+    position:absolute;
+    width:100%;
+    min-height:100%;
+    top: 0px;
+    left:0px;
+    opacity: 0.3;
+    background-color: black;
+  }
+
+  .card {
+    z-index:20;
+  }
+}

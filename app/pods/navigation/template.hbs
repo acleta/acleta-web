@@ -1,10 +1,21 @@
-<!-- <nav> -->
-<!--   <ul class="side&#45;nav"> -->
-<!--     <li><a href="#!">First Sidebar Link</a></li> -->
-<!--     <li><a href="#!">Second Sidebar Link</a></li> -->
-<!--   </ul> -->
-<!--   <div class="nav&#45;wrapper"> -->
-<!--     <a href="#" class="button&#45;collapse"><i class="mdi&#45;navigation&#45;menu"></i></a> -->
-<!--     <a href="#" class="brand&#45;logo">Acleta</a> -->
-<!--   </div> -->
-<!-- </nav> -->
+<nav class="navbar">
+  <ul {{bind-attr class=":side-nav active"}}>
+    <li><a href="#!">First Sidebar Link</a></li>
+    <li><a href="#!">Second Sidebar Link</a></li>
+    <li>{{#link-to 'features.about'}}About{{/link-to}}</li>
+    <li>
+      <a {{action 'toggleSideNav'}}>Close</a>
+    </li>
+  </ul>
+  <div class="nav-wrapper">
+    <a {{action 'toggleSideNav'}}>
+      &nbsp;
+      <i class="mdi-navigation-menu"></i>
+      &nbsp;
+    </a>
+
+    {{#link-to 'map' classNames="brand-logo"}}
+      Acleta
+    {{/link-to}}
+  </div>
+</nav>

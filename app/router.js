@@ -8,8 +8,9 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.resource('map', {path: '/'}, function() {
     this.resource('features', function() {
+      this.route('about');
       this.resource('features.bike-santiago', {path:'/bike-santiago/:station_id'})
-    })
+    });
   });
 });
 

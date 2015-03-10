@@ -13,8 +13,10 @@ export default Ember.Object.extend({
     map.setView([-33.448, -70.624],13);
     L.tileLayer('https://{s}.tiles.mapbox.com/v3/sagmor.ld1p175h/{z}/{x}/{y}.png', {
       attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-      maxZoom: 18
+      maxZoom: 18,
+      zoomControl: false
     }).addTo(map);
+    new L.Control.Zoom({ position: 'bottomleft' }).addTo(map);
 
     this.set('view',view);
     this.set('map',map);
