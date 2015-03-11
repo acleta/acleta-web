@@ -6,6 +6,7 @@
   left: 0 !important;
 }
 
+
 .features {
   position:absolute;
   width:100%;
@@ -91,8 +92,32 @@
   }
 }
 
+.navbar .brand {
+  position: absolute;
+  color: #fff;
+  display: inline-block;
+  font-size: 2.1rem;
+  padding: 0;
+
+  img {
+    height: $navbar-height-mobile;
+  }
+}
+
+
 .cordova .navbar {
   padding-top: 20px;
   height: $navbar-height-mobile +20px;
   line-height: $navbar-height-mobile +20px;
+}
+
+@media #{$medium-and-up} {
+  .navbar .brand img {
+    height: $navbar-height;
+  }
+
+  .cordova .navbar {
+    height: $navbar-height+20px;
+    line-height: $navbar-height+20px;
+  }
 }
