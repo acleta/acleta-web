@@ -10,14 +10,18 @@ body { margin:0; padding:0; }
 
 
   .marker-bike-santiago {
-    color: #ff9a19;
+    color: #95a5a6;
 
-    &.status-unavailable, &.status-unknown  {
-      color: gray;
+    &.status-unavailable  {
+      color: #e74c3c;
     }
 
     &.status-full, &.status-empty {
-      color: red;
+      color: #f1c40f;
+    }
+
+    &.status-active {
+      color: #2ecc71;
     }
   }
 }

@@ -19,6 +19,10 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
+    mapbox: {
+      key: 'pk.eyJ1Ijoic2FnbW9yIiwiYSI6Ilp1QmlLVEUifQ.BPt41UAlKaduMq1QIdmpag',
+      mapID: 'sagmor.ld1p175h'
+    }
   };
 
   if (environment === 'development') {

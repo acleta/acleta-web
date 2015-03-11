@@ -1,11 +1,7 @@
 {{features-backdrop action="hide"}}
-<div class="row">
-  <div class="col s12 m8 offset-m2">
-    <div class="card">
-      {{#link-to 'map' classNames="waves-effect waves-teal btn-flat left"}}
-      <i class="mdi-navigation-chevron-left left"></i>{{t 'back'}}
-      {{/link-to}}
-      {{outlet}}
-    </div>
-  </div>
+<div class="card z-depth-5">
+  {{#link-to 'map' classNames="back waves-effect waves-teal btn-flat left"}}
+  <i class="mdi-navigation-chevron-left left"></i>{{t 'back'}}
+  {{/link-to}}
+  {{outlet}}
 </div>

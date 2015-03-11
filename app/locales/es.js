@@ -3,13 +3,20 @@ export default {
   address: 'Dirección',
   status: 'Estado',
   close: 'Cerrar',
-  about_us: 'Sobre nosotros',
+  about_acleta: 'Sobre Acleta',
+  bikes: 'Bicicletas',
+  docks: 'Estaciones',
+  availables: {
+    zero: 'No hay disponible',
+    one: 'Solo una disponible',
+    other: '%@ disponibles'
+  },
   bike_santiago: {
     statuses: {
       active: 'Activo',
       closed: 'Cerrado',
       empty: 'Sin bicicletas',
-      full: 'Sin Estacionamientos',
+      full: 'Sin estaciones',
       unavailable: 'No disponible',
       unknown: 'Desconocido'
     }

@@ -1,17 +1,16 @@
 <nav class="navbar fixed">
   <ul {{bind-attr class=":side-nav active"}}>
-    <li>{{#link-to 'features.about'}}{{t 'about_us'}}{{/link-to}}</li>
+    <li>{{#link-to 'features.about'}}{{t 'about_acleta'}}{{/link-to}}</li>
     <li>
       <a {{action 'toggleSideNav'}}>{{t 'close'}}</a>
     </li>
   </ul>
   <div class="nav-wrapper">
-    <a {{action 'toggleSideNav'}}>
+    <a href="#" {{action 'toggleSideNav'}}>
       &nbsp;
       <i class="mdi-navigation-menu"></i>
       &nbsp;
     </a>
-
     {{#link-to 'map' classNames="brand-logo"}}
       Acleta
     {{/link-to}}

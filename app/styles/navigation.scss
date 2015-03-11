@@ -1,3 +1,7 @@
+[data-ember-action] {
+  cursor: pointer;
+}
+
 .side-nav.active {
   left: 0 !important;
 }
@@ -22,7 +26,68 @@
   }
 
   .card {
+    position: absolute;
     z-index:20;
+    height: 420px;
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+    &:after {
+      content: "";
+      background: linear-gradient(black, white);
+      height: 20px;
+    }
+
+    .back {
+      color: white;
+      position: absolute;
+      top: 5px;
+      left: 0;
+    }
+
+    .card-header {
+      @extend .card-image;
+      height: 100px;
+      background-color: $primary-color;
+
+      .card-title {
+        font-size: 20px;
+      }
+    }
+
+    .features-bike-santiago {
+      .card-header {
+        background-color: #ff9a19;
+      }
+
+      .status {
+        background-color: #95a5a6;
+        width: 100%;
+        padding: 5px 0;
+        text-align: center;
+        color: white;
+
+        &.Active {
+          background-color: #2ecc71;
+        }
+        &.Empty, &.Full {
+          background-color: #f1c40f;
+        }
+        &.Unavailable {
+          background-color: #e74c3c;
+        }
+      }
+    }
+
+    .card-content {
+      overflow-y: auto;
+      height: 100%;
+    }
   }
 }
 

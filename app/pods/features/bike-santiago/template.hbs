@@ -1,15 +1,25 @@
+<div class="card-header">
+  <span class="card-title">
+    <i class="fa fa-bicycle fa-inverse"></i>
+    {{properties.name}}
+  </span>
+</div>
+<div {{bind-attr class=":status status"}}>
+  {{t statusKey}}
+</div>
 <div class="card-content">
-  <h4>{{properties.name}}</h4>
-  <dd>
-    <dt>{{t 'address'}}</dt>
-    <dl>{{properties.address}}</dl>
-    <dt>{{t 'status'}}</dt>
-    <dl>{{t statusKey}}</dl>
-    <dt>Docks totales</dt>
-    <dl>{{properties.totalDocks}}</dl>
-    <dt>Docks disponibles</dt>
-    <dl>{{properties.availableDocks}}</dl>
-    <dt>Bicicletas disponibles</dt>
-    <dl>{{properties.availableBikes}}</dl>
-  </dd>
+  <ul>
+    <li>
+      <strong>{{t 'address'}}:</strong>
+      {{properties.address}}
+    </li>
+    <li>
+      <strong>{{t 'bikes'}}:</strong>
+      {{t 'availables' properties.availableBikes}}
+    </li>
+    <li>
+      <strong>{{t 'docks'}}:</strong>
+      {{t 'availables' properties.availableDocks}}
+    </li>
+  </ul>
 </div>
