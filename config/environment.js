@@ -45,5 +45,10 @@ module.exports = function(environment) {
     ENV.googleAnalyticsTrackingId = 'UA-60597458-1'
   }
 
+  if (process.env.CORDOVA) {
+    ENV.CORDOVA = true;
+    ENV.locationType = 'hash';
+  }
+
   return ENV;
 };
