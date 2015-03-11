@@ -17,9 +17,17 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-// Leaflet
-app.import("bower_components/leaflet/dist/leaflet.js");
-app.import("bower_components/leaflet/dist/leaflet.css");
+// Mapbox
+app.import("bower_components/mapbox.js/mapbox.js");
+app.import("bower_components/mapbox.js/mapbox.css");
+app.import("bower_components/mapbox.js/images/icons-000000@2x.png", { destDir: "assets/images" });
+app.import("bower_components/mapbox.js/images/icons.svg", { destDir: "assets/images" });
+app.import("bower_components/mapbox.js/images/layers.png", { destDir: "assets/images" });
+app.import("bower_components/mapbox.js/images/marker-icon.png", { destDir: "assets/images" });
+app.import("bower_components/mapbox.js/images/icons-ffffff@2x.png", { destDir: "assets/images" });
+app.import("bower_components/mapbox.js/images/layers-2x.png", { destDir: "assets/images" });
+app.import("bower_components/mapbox.js/images/marker-icon-2x.png", { destDir: "assets/images" });
+app.import("bower_components/mapbox.js/images/marker-shadow.png", { destDir: "assets/images" });
 
 // Font Awesome
 app.import("bower_components/font-awesome/css/font-awesome.css");
