@@ -106,9 +106,9 @@
 
 
 .cordova .navbar {
-  padding-top: 20px;
-  height: $navbar-height-mobile +20px;
-  line-height: $navbar-height-mobile +20px;
+  padding-top: 10px;
+  height: $navbar-height-mobile +10px;
+  line-height: $navbar-height-mobile +10px;
 }
 
 @media #{$medium-and-up} {
@@ -117,7 +117,7 @@
   }
 
   .cordova .navbar {
-    height: $navbar-height+20px;
-    line-height: $navbar-height+20px;
+    height: $navbar-height+10px;
+    line-height: $navbar-height+10px;
   }
 }
