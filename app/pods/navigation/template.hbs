@@ -6,11 +6,13 @@
     </li>
   </ul>
   <div class="nav-wrapper">
+    {{#if navigationEnabled}}
     <a href="#" {{action 'toggleSideNav'}}>
       &nbsp;
       <i class="mdi-navigation-menu"></i>
       &nbsp;
     </a>
+    {{/if}}
     {{#link-to 'map' classNames="brand"}}
       <img src="logo.png" alt="Acleta" />
     {{/link-to}}
