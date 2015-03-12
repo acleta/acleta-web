@@ -55,4 +55,9 @@ app.import("bower_components/github-fork-ribbon-css/gh-fork-ribbon.css");
 // ember-google-analytics
 app.import("bower_components/ember-google-analytics/ember-google-analytics.js");
 
+// leaflet-usermarker
+app.import("bower_components/leaflet-usermarker/src/leaflet.usermarker.js");
+app.import("bower_components/leaflet-usermarker/src/leaflet.usermarker.css");
+app.import("bower_components/leaflet-usermarker/src/img/bluedot.png", { destDir: "assets/img" });
+
 module.exports = app.toTree();

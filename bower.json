@@ -16,6 +16,7 @@
     "materialize": "~0.95.3",
     "github-fork-ribbon-css": "~0.1.1",
     "ember-google-analytics": "~0.1.0",
-    "mapbox.js": "~2.1.5"
+    "mapbox.js": "~2.1.5",
+    "leaflet-usermarker": "heyman/leaflet-usermarker"
   }
 }
