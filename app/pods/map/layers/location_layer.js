@@ -1,4 +1,5 @@
 import BaseLayer from './base';
+import ENV from 'acleta/config/environment';
 /* global L */
 
 export default BaseLayer.extend({
@@ -14,8 +15,17 @@ export default BaseLayer.extend({
       timeout           : 27000
     };
 
-    var watchID = navigator.geolocation.watchPosition(setPosition,onError,options);
-    this.set('watchID',watchID);
+    var initializer = function() {
+      var watchID = navigator.geolocation.watchPosition(setPosition,onError,options);
+      this.set('watchID',watchID);
+    }.bind(this);
+
+
+    if (ENV.CORDOVA) {
+      document.addEventListener("deviceready", initializer, false);
+    } else {
+      initializer();
+    }
   },
   setPosition: function(position) {
     var location = new L.LatLng(position.coords.latitude, position.coords.longitude);
