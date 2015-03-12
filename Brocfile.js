@@ -60,4 +60,9 @@ app.import("bower_components/leaflet-usermarker/src/leaflet.usermarker.js");
 app.import("bower_components/leaflet-usermarker/src/leaflet.usermarker.css");
 app.import("bower_components/leaflet-usermarker/src/img/bluedot.png", { destDir: "assets/img" });
 
+// Cordova
+if (process.env.CORDOVA) {
+  app.import("vendor/cordova.js");
+}
+
 module.exports = app.toTree();
